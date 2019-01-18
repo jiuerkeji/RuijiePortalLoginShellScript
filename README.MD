@@ -60,7 +60,9 @@ chmod +x /usr/bin/ruijie.sh
 Openwrt / LEDE 默认的时区是 UTC，这里为了下面配置 crontab 中设置时间方便，以及让路由器的时间能跟北京时间同步。需要将时区改成 Asia/Shanghai。
 
 打开并登陆到路由器后台管理页面，之后进入"系统" —— "系统"：
+
 ![Set timezone](images/set_timezone.png)
+
 将其中的时区选项修改成 **Asia/Shanghai**，同时注意底下的 **启用 NTP 客户端** 是否开启以及 **候选 NTP 服务器** 是否设置正确。
 
 ### 配置 crontab
