@@ -67,6 +67,7 @@ Openwrt / LEDE 默认的时区是 UTC，这里为了下面配置 crontab 中设�
 
 打开浏览器，登陆到路由器的后台管理页面（Luci）。之后选择 "系统" —— "计划任务"：
 ![Crontab](images/select_cron.png)
+
 这里先说明一下 Openwrt / LEDE 的 crontab 格式：
 
 ```
@@ -81,9 +82,12 @@ Openwrt / LEDE 默认的时区是 UTC，这里为了下面配置 crontab 中设�
 ```
 
 我设定为每天早上 6:08 的时候进行锐捷认证，因为我所在的学校是每天晚上11点断网，隔天早上6点左右恢复，具体恢复时间似乎有一定的误差，所以延迟了8分钟。其实可以设得更晚一点的，毕竟我也不会那么早起床。你可以根据自己所在学校的情况设置执行脚本的时间。
+
 ![Crontab edit](images/crontab.png)
+
 填写好了点击 "提交" 即可。
 提交完了之后记得重启路由器，或者到 "系统" —— "启动项" 中重启 cron 服务：
+
 ![Restart cron](images/restart_cron.png)
 
 # 局限性
